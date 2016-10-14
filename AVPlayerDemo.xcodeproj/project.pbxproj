@@ -13,6 +13,9 @@
 		A93082351DAD012900BAE525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93082331DAD012900BAE525 /* Main.storyboard */; };
 		A93082371DAD012900BAE525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93082361DAD012900BAE525 /* Assets.xcassets */; };
 		A930823A1DAD012900BAE525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93082381DAD012900BAE525 /* LaunchScreen.storyboard */; };
+		A95544271DAFC178005AF404 /* GYVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A95544261DAFC178005AF404 /* GYVideoPlayerView.m */; };
+		A97700921DAE64B1007C4628 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A977008F1DAE64B1007C4628 /* MBProgressHUD+Add.m */; };
+		A97700931DAE64B1007C4628 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A97700911DAE64B1007C4628 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		A93082361DAD012900BAE525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93082391DAD012900BAE525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A930823B1DAD012900BAE525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A95544251DAFC178005AF404 /* GYVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYVideoPlayerView.h; sourceTree = "<group>"; };
+		A95544261DAFC178005AF404 /* GYVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYVideoPlayerView.m; sourceTree = "<group>"; };
+		A977008E1DAE64B1007C4628 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		A977008F1DAE64B1007C4628 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		A97700901DAE64B1007C4628 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A97700911DAE64B1007C4628 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,8 @@
 		A93082291DAD012900BAE525 /* AVPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A977008C1DAE64B1007C4628 /* Third */,
+				A93082411DAD015200BAE525 /* View */,
 				A930822D1DAD012900BAE525 /* AppDelegate.h */,
 				A930822E1DAD012900BAE525 /* AppDelegate.m */,
 				A93082301DAD012900BAE525 /* ViewController.h */,
@@ -77,6 +88,34 @@
 				A930822B1DAD012900BAE525 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A93082411DAD015200BAE525 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A95544251DAFC178005AF404 /* GYVideoPlayerView.h */,
+				A95544261DAFC178005AF404 /* GYVideoPlayerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A977008C1DAE64B1007C4628 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				A977008D1DAE64B1007C4628 /* HUD */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		A977008D1DAE64B1007C4628 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				A977008E1DAE64B1007C4628 /* MBProgressHUD+Add.h */,
+				A977008F1DAE64B1007C4628 /* MBProgressHUD+Add.m */,
+				A97700901DAE64B1007C4628 /* MBProgressHUD.h */,
+				A97700911DAE64B1007C4628 /* MBProgressHUD.m */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93082321DAD012900BAE525 /* ViewController.m in Sources */,
+				A95544271DAFC178005AF404 /* GYVideoPlayerView.m in Sources */,
+				A97700931DAE64B1007C4628 /* MBProgressHUD.m in Sources */,
+				A97700921DAE64B1007C4628 /* MBProgressHUD+Add.m in Sources */,
 				A930822F1DAD012900BAE525 /* AppDelegate.m in Sources */,
 				A930822C1DAD012900BAE525 /* main.m in Sources */,
 			);
@@ -312,6 +354,7 @@
 				A93082401DAD012900BAE525 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6F-pC-ZQY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fSy-YD-93i"/>
+                                </constraints>
+                                <state key="normal" title="视频2">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="disabled" title="正在播放.."/>
+                                <connections>
+                                    <action selector="playVideo2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b44-xV-a2S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4S-eQ-W9q">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jxn-Qa-AwA"/>
+                                </constraints>
+                                <state key="normal" title="视频1">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="disabled" title="正在播放.."/>
+                                <connections>
+                                    <action selector="playVideo1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUV-Dk-OoA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHN-n2-e5C">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="T67-Wm-KPM"/>
+                                    <constraint firstAttribute="height" constant="30" id="khK-pR-E7M"/>
+                                </constraints>
+                                <state key="normal" title="释放播放器">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deletePlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7U-Jp-QUt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T74-Xd-yDb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="E6p-0q-GH8"/>
+                                    <constraint firstAttribute="height" constant="30" id="RVf-Xg-fNR"/>
+                                </constraints>
+                                <state key="normal" title="添加播放器">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PuR-uy-dAv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X6F-pC-ZQY" secondAttribute="bottom" constant="45" id="57K-AF-8qe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x4S-eQ-W9q" secondAttribute="bottom" constant="45" id="5I3-1u-SPn"/>
+                            <constraint firstItem="hHN-n2-e5C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="996-i4-KHB"/>
+                            <constraint firstItem="X6F-pC-ZQY" firstAttribute="width" secondItem="x4S-eQ-W9q" secondAttribute="width" id="C9w-vU-uWT"/>
+                            <constraint firstItem="X6F-pC-ZQY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="FmX-ob-8Xh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x4S-eQ-W9q" secondAttribute="trailing" constant="50" id="Ve0-ty-nII"/>
+                            <constraint firstItem="hHN-n2-e5C" firstAttribute="top" secondItem="T74-Xd-yDb" secondAttribute="bottom" constant="10" id="fmK-1p-DeL"/>
+                            <constraint firstItem="x4S-eQ-W9q" firstAttribute="leading" secondItem="X6F-pC-ZQY" secondAttribute="trailing" constant="50" id="hHJ-sN-832"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hHN-n2-e5C" secondAttribute="bottom" constant="100" id="ok5-tq-Ibw"/>
+                            <constraint firstItem="x4S-eQ-W9q" firstAttribute="leading" secondItem="X6F-pC-ZQY" secondAttribute="trailing" constant="50" id="q5b-7S-NAY"/>
+                            <constraint firstItem="T74-Xd-yDb" firstAttribute="centerX" secondItem="hHN-n2-e5C" secondAttribute="centerX" id="rAz-za-2m5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="play1Btn" destination="x4S-eQ-W9q" id="PEP-cj-lhk"/>
+                        <outlet property="play2Btn" destination="X6F-pC-ZQY" id="BOH-35-kMg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="98.50074962518741"/>
         </scene>
     </scenes>
 </document>
